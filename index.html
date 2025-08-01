@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris Prediction</title>
+</head>
+<body>
+    <h2>Enter Iris Flower Features</h2>
+    <form action="/predict" method="post">
+        <input type="text" name="sepal length (cm)" placeholder="Sepal Length (cm)" required><br>
+        <input type="text" name="sepal width (cm)" placeholder="Sepal Width (cm)" required><br>
+        <input type="text" name="petal length (cm)" placeholder="Petal Length (cm)" required><br>
+        <input type="text" name="petal width (cm)" placeholder="Petal Width (cm)" required><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
